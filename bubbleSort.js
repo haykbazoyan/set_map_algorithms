@@ -1,3 +1,23 @@
+// BubbleSort without recursion
+const numbers2 = [3, 5, 6, 4, 2, 1];
+
+const bubbleSortV2 = (array) => {
+  let result = [];
+
+  for (let i = 0; i < array.length - 1; i++) {
+    for (let j = 1 + i; j < array.length; j++) {
+      if (array[i] > array[j]) {
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+  }
+  return array;
+};
+
+console.log(bubbleSortV2(numbers2)); // [1, 2, 3, 4, 5, 6]
+
+// USING RECURSION
+
 const numbers = [3, 5, 6, 4, 2, 1];
 
 const bubbleSort = (items) => {
